@@ -1,0 +1,8 @@
+Script started on Sat 29 Feb 2020 10:47:29 PM CST
+]0;tc3456co@ahscentos:~/Homework05[?1034h[tc3456co@ahscentos Homework05]$ g++ financialAid.cpp
+g++: error: financialAid.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+]0;tc3456co@ahscentos:~/Homework05[tc3456co@ahscentos Homework05]$ g++ financialAid.cpp[1PAid.cpp[1Pid.cpp[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+
+Script done on Sat 29 Feb 2020 10:48:06 PM CST

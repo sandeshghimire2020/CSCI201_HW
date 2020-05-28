@@ -1,0 +1,79 @@
+Script started on Sat 29 Feb 2020 10:48:21 PM CST
+]0;tc3456co@ahscentos:~/Homework05/Homework05[?1034h[tc3456co@ahscentos Homework05]$ g++ financialAid.cpp[5Pscript Lab5.txtg++ financialAid.cpp
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ ./a.out
+Enter the amount of your tuition cost, (not to exceed $2,000.00: 2000
+
+Enter your GPA (a value between 0 to 4.0): 2
+
+You entitled to receive $1000 financial aid this year.
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ cat financialAid.cpp
+#include <iostream>
+
+using namespace std;
+void ComputeAid(float,float Gpa=2.0);
+int main()
+{
+    float tuition=0.00;
+    float Gpa=0.0;
+
+    cout<<"Enter the amount of your tuition cost, (not to exceed $2,000.00: ";
+    cin>>tuition;
+    cout<<endl;
+    cout<<"Enter your GPA (a value between 0 to 4.0): ";
+    cin>>Gpa;
+    cout<<endl;
+
+    if (Gpa<2)
+        {cout<<"Sorry you do not qualify academically for financial aid."<<endl;
+        }
+    else if (Gpa>=2 && Gpa<3)
+    {
+        ComputeAid(tuition);
+    }
+    else if (Gpa>=3 && Gpa<=4){
+        ComputeAid(tuition,Gpa);
+    }
+    else if(Gpa<0 && Gpa>4)
+    {
+        cout<<"Invalid GPA. Please enter a value between 0 to 4.0)"<<endl;
+    }
+
+
+
+
+
+
+    return 0;
+}
+void ComputeAid(float tuition,float Gpa)
+{
+    float Aid=0.00;
+
+     if (Gpa>=2 && Gpa< 3)
+    {
+        Aid= Gpa*tuition/4;
+        cout<<"You entitled to receive $"<<Aid<<" financial aid this year."<<endl;
+    }
+    else if(Gpa>=3 && Gpa<=4)
+    {
+        Aid= Gpa*tuition/4;
+        cout<<"You entitled to receive $"<<Aid<<" financial aid this year."<<endl;
+    }
+}
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ ./a.out
+Enter the amount of your tuition cost, (not to exceed $2,000.00: 4000
+
+Enter your GPA (a value between 0 to 4.0): 0
+
+Sorry you do not qualify academically for financial aid.
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ 2[K17000[K
+bash: 1700: command not found...
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ ./a.out
+Enter the amount of your tuition cost, (not to exceed $2,000.00: 1700
+
+Enter your GPA (a value between 0 to 4.0): 3
+
+You entitled to receive $1275 financial aid this year.
+]0;tc3456co@ahscentos:~/Homework05/Homework05[tc3456co@ahscentos Homework05]$ exit
+
+Script done on Sat 29 Feb 2020 10:51:48 PM CST

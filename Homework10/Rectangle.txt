@@ -1,0 +1,148 @@
+Script started on Sun 19 Apr 2020 08:52:47 PM CDT
+]0;tc3456co@ahscentos:~/Homework10[?1034h[tc3456co@ahscentos Homework10]$ ./a.outg++ Time.cpp[1P.cpp[1P.cpp[1P.cpp[1P.cppR.cppe.cppc.cppt.cppa.cppn.cppg.cppl.cppe.cpp
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ g++ Rectangle.cpp[10P./a.outg++ Time.cppmain.cpp[5P./a.outcat Time.cpp[1P.cpp[1P.cpp[1P.cpp[1P.cppR.cppe.cppc.cppt.cppa.cppn.cpph.cppg.cpp[1P.cpp[1P.cppg.cppl.cppe.cpp
+#include <iostream>
+
+using namespace std;
+
+class Rectangle{
+
+
+
+
+public:
+    Rectangle();
+    Rectangle(float,float);
+    void setlength(float);
+    void setwidth(float);
+    float perimeter();
+    float area();
+    void show();
+    int sameArea(Rectangle);
+private:
+    float Width;
+    float Length;
+
+
+};
+
+Rectangle::Rectangle(){
+
+    Length=0;
+    Width=0;
+}
+Rectangle::Rectangle(float Len,float Wid){
+    Length=Len;
+    Width=Wid;
+
+
+}
+
+void Rectangle::setlength(float Len){
+
+    Length=Len;
+
+}
+void Rectangle::setwidth(float Wid){
+
+    Width=Wid;
+
+}
+
+float Rectangle::perimeter(){
+
+    float per;
+    per= 2*(Length+Width);
+
+    return per;
+}
+float Rectangle::area(){
+
+    float are;
+    are= Length*Width;
+
+    return are;
+}
+void Rectangle::show(){
+
+    cout<<"Area of Rectangle is: "<< area()<<endl;
+    cout<<"Perimeter of Rectangle is: "<< perimeter()<<endl;
+
+}
+int Rectangle::sameArea(Rectangle Temp){
+
+
+
+    if (Temp.area() == area()){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+
+}
+int main()
+{
+
+    Rectangle Rect1(5.0,2.5);
+    Rectangle Rect2(5.0,18.9);
+    Rect1.show();
+    Rect2.show();
+    cout<<endl;
+    if (Rect2.sameArea(Rect1)==1){
+        cout<<"The both triangle have same area."<<endl;
+        }
+    else{
+        cout<<"The both triangle have different area."<<endl;
+    }
+
+    Rect1.setlength(15);
+    Rect1.setwidth(6);
+    cout<<endl;
+    cout<<endl;
+
+    Rect1.show();
+    Rect2.show();
+    cout<<endl;
+    if (Rect2.sameArea(Rect1)==1){
+        cout<<"The both triangle have same area."<<endl;
+        }
+    else{
+        cout<<"The both triangle have different area."<<endl;
+    }
+
+    return 0;
+}
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ cat Rectangle.cppg++[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10P./a.out
+Area of Rectangle is: 12.5
+Perimeter of Rectangle is: 15
+Area of Rectangle is: 94.5
+Perimeter of Rectangle is: 47.8
+
+The both triangle have different area.
+
+
+Area of Rectangle is: 90
+Perimeter of Rectangle is: 42
+Area of Rectangle is: 94.5
+Perimeter of Rectangle is: 47.8
+
+The both triangle have different area.
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ ./a.outcat Rectangle.cpp[10P./a.out
+Area of Rectangle is: 12.5
+Perimeter of Rectangle is: 15
+Area of Rectangle is: 94.5
+Perimeter of Rectangle is: 47.8
+
+The both triangle have different area.
+
+
+Area of Rectangle is: 90
+Perimeter of Rectangle is: 42
+Area of Rectangle is: 94.5
+Perimeter of Rectangle is: 47.8
+
+The both triangle have different area.
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ exit
+
+Script done on Sun 19 Apr 2020 08:53:23 PM CDT

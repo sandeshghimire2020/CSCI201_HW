@@ -1,0 +1,110 @@
+Script started on Sun 19 Apr 2020 08:49:09 PM CDT
+]0;tc3456co@ahscentos:~/Homework10[?1034h[tc3456co@ahscentos Homework10]$ script Lab09.txtcd LabAssignment09[2Pscript Lab09.txt[Kscript Lab09.txtcd LabAssignment09[11P./a.outcat main.cpp[1P.cpp[1P.cpp[1P.cpp[1P.cppt.cppi.cppm.cppe.cpp[C[C[C[C
+cat: time.cpp: No such file or directory
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ cat time.cpp[1Pime.cppTime.cpp
+#include <iostream>
+
+using namespace std;
+
+
+class time{
+public:
+    int hours;
+    int minutes;
+
+
+public:
+    time();
+    time(int,int);
+    void settime(int,int);
+    void showtime();
+    time sum(time);
+
+
+};
+
+time::time(){
+hours=0;
+minutes=0;
+}
+
+time::time(int hrs,int mi){
+hours=hrs;
+minutes=mi;
+}
+
+void time::settime(int hrs,int mi){
+
+    hours=hrs;
+    minutes=mi;
+}
+
+void time::showtime(){
+
+    cout<<"hours: "<<hours<<" minute: "<<minutes<<endl;
+}
+
+time time::sum(time Temp){
+int Hou,minu;
+time t3;
+
+    Hou=Temp.hours+hours;
+    minu=Temp.minutes+minutes;
+    t3.hours=Hou;
+    t3.minutes=minu;
+    return t3;
+
+
+}
+
+int main()
+{
+    time t1(6,45);
+    time t2(7,10);
+    time t3;
+    cout<<"Showing the first time: "<<endl;
+    t1.showtime();
+    cout<<"Showing the second time: "<<endl;
+    t2.showtime();
+
+    cout<<endl;
+    cout<<"Showing the sum of both time: "<<endl;
+    t3=t1.sum(t2);
+    t3.showtime();
+
+    return 0;
+}
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ cat Time.cpptime.cppscript Lab09.txtcd LabAssignment09[2Pscript Lab09.txt[4Pcat time.cppTime.cpp[Kcat Time.cpptime.cppscript Lab09.txtcd LabAssignment09[11P./a.out
+bash: ./a.out: No such file or directory
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ ./a.outcat Time.cpptime.cppscript Lab09.txtcd LabAssignment09[11P./a.outcat main.cppg++[C[C[C[C[C[C[C[C[C
+g++: error: main.cpp: No such file or directory
+g++: fatal error: no input files
+compilation terminated.
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ g++ main.cpp[5P./a.outg++ main.cpp[C[1P.cpp[1P.cpp[1P.cpp[1P.cppT.cppi.cppm.cppe.cpp
+[01m[KTime.cpp:43:1:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime[m[K’ does not name a type
+ time time::sum(time Temp){
+[01;32m[K ^[m[K
+[01m[KTime.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[KTime.cpp:58:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kt1[m[K’
+     time t1(6,45);
+[01;32m[K          ^[m[K
+[01m[KTime.cpp:59:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kt2[m[K’
+     time t2(7,10);
+[01;32m[K          ^[m[K
+[01m[KTime.cpp:60:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kt3[m[K’
+     time t3;
+[01;32m[K          ^[m[K
+[01m[KTime.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt1[m[K’ was not declared in this scope
+     t1.showtime();
+[01;32m[K     ^[m[K
+[01m[KTime.cpp:64:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt2[m[K’ was not declared in this scope
+     t2.showtime();
+[01;32m[K     ^[m[K
+[01m[KTime.cpp:68:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kt3[m[K’ was not declared in this scope
+     t3=t1.sum(t2);
+[01;32m[K     ^[m[K
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ g++ Time.cppmain.cpp[5P./a.out
+bash: ./a.out: No such file or directory
+]0;tc3456co@ahscentos:~/Homework10[tc3456co@ahscentos Homework10]$ exit
+
+Script done on Sun 19 Apr 2020 08:52:36 PM CDT

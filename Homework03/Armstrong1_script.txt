@@ -1,0 +1,161 @@
+Script started on Sun 16 Feb 2020 08:30:28 PM CST
+]0;tc3456co@ahscentos:~/Homework03[?1034h[tc3456co@ahscentos Homework03]$ g++ -o Armstrong1 Armstrong1.co[Kpp
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./Armstr[K[K[K[K[K[K[K[Kg++ -o [K[K[K[K[K[K[Kg++ -o Armstrong1 Armstrong1.cpp[C[C[C[1P Armstrong1.cpp2 Armstrong1.cpp[C[C[C[C[C[C[C[C[C[C[C[1P.cpp2.cpp
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ g++ -o Armstrong2 Armstrong2.cpp[C[1P.cpp3.cpp[1P Armstrong3.cpp3 Armstrong3.cpp
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./a[KArmstrong1
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./Armstrong1[K2
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./Armstrong2[K3
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./[K[Kcad [K[Kt Armstrong1.cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Index,Rem,Total,Num;
+
+
+    Num=0;
+    cout<<"The Armstrong number between 0 to 500 are listed bellow: "<<endl;
+    //Starting the while loop for numbers 0 to 500
+        while (Num <= 500){
+            Index=Num;
+            Total=0;
+    //second while loop to convert and find Armstrong number
+            while (Index !=0 ){
+                 Rem= Index % 10;
+                 Total= Total + (Rem*Rem*Rem);
+                 Index= Index / 10;
+                }
+
+            if (Total == Num){
+
+                    cout<<Num<<endl;
+            }
+            Num= Num+1;
+        }
+    return 0;
+}
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ cat Armstrong1.cpp[C[1P.cpp2.cpp
+#include <iostream>
+
+//Including the sstream to use stringstream function
+
+#include <sstream>
+
+using namespace std;
+
+int main()
+{
+    int Index,Rem,Total;
+    cout<<"The Armstrong number between 0 to 500 are listed bellow: "<<endl;
+
+    // Starting the for loop for number less and equal to 500.
+
+        for (int Num = 0 ; Num<=500 ; Num++){
+
+            Index=Num;
+            Total=0;
+            // Converting the number to string in order to count it after sometime.
+            stringstream ss;
+            ss<<Num;
+            string Check;
+            ss>>Check;
+        // starting second for loop to check if it is Armstrong number or not.
+        // Checking the size of the string (Check) that was converted into string using stringstream before.
+        // condition was implemented in a way that will prevent the extra loops
+            for (int i= 1 ; i<=Check.size(); i++){
+                 Rem= Index % 10;
+                 Total= Total + (Rem*Rem*Rem);
+                 Index= Index / 10;
+                }
+
+            if (Total == Num){
+
+                    cout<<Num<<endl;
+            }
+
+        }
+    return 0;
+}
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ cat Armstrong2.cpp[C[1P.cpp3.cpp
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int Index,Rem,Total,Num;
+
+
+    Num=0;
+    cout<<"The Armstrong number between 0 to 500 are listed bellow: "<<endl;
+    //Starting the while loop for numbers 0 to 500
+        do {
+            Index=Num;
+            Total=0;
+    //second while loop to convert and find Armstrong number
+            do {
+                 Rem= Index % 10;
+                 Total= Total + (Rem*Rem*Rem);
+                 Index= Index / 10;
+                }while (Index !=0 );
+
+            if (Total == Num){
+
+                    cout<<Num<<endl;
+            }
+            Num= Num+1;
+        }while (Num <= 500);
+    return 0;
+}
+
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ cat Armstrong3.cpp2.cpp1.cpp[6P./Armstrong321
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./Armstrong1cat Armstrong3.cpp2.cpp3.cpp2.cpp1.cpp[6P./Armstrong32
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ ./Armstrong21cat Armstrong3.cpp2.cpp1.cpp[6P./Armstrong3
+The Armstrong number between 0 to 500 are listed bellow: 
+0
+1
+153
+370
+371
+407
+]0;tc3456co@ahscentos:~/Homework03[tc3456co@ahscentos Homework03]$ exit
+exit
+
+Script done on Sun 16 Feb 2020 08:32:31 PM CST

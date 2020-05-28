@@ -1,0 +1,120 @@
+Script started on Sun 05 Apr 2020 12:22:04 PM CDT
+]0;tc3456co@ahscentos:~/Homework7[?1034h[tc3456co@ahscentos Homework7]$ g++ Homework7.cpp
+[01m[KHomework7.cpp:[m[K In function ‘[01m[Kint main()[m[K’:
+[01m[KHomework7.cpp:46:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[K}[m[K’ token
+  }
+[01;32m[K  ^[m[K
+]0;tc3456co@ahscentos:~/Homework7[tc3456co@ahscentos Homework7]$ g++ [K[K[K[Kg++ Homework7.cpp
+]0;tc3456co@ahscentos:~/Homework7[tc3456co@ahscentos Homework7]$ cat Homework7.cpp
+#include <iostream>
+#include <string>
+
+ using namespace std;
+
+ struct DateRec{
+     int Year;
+     int Month;
+     int Day;
+ };
+ struct BookRec
+ {
+ string title;
+ string author;
+ string publisher;
+ float cost;
+ DateRec publishDate;
+ };
+
+ int main()
+ {
+ //declare Array
+ BookRec myBook[5];
+
+ //Read in all information for all 5 books
+ int j=1;
+ for (int i=0;i<5;i++){
+
+
+     cout <<"Enter book title of book "<<j<<": ";
+     cin>>myBook[i].title;
+     cout <<"Enter book author of "<<"book "<<j<<": ";
+     cin>> myBook[i].author;
+     cout <<"Enter publisher of "<<"book "<<j<<": ";
+     cin>> myBook[i].publisher;
+     cout <<"Enter cost of book of "<<"book "<<j<<": ";
+     cin >> myBook[i].cost;
+     cin.ignore(1);
+     cout<<"Enter publish Year of Book "<<j<<": ";
+     cin>> myBook[i].publishDate.Year;
+     cout<<"Enter publish Month of Book "<<j<<": ";
+     cin>> myBook[i].publishDate.Month;
+     cout<<"Enter publish Day of Book "<<j<<": ";
+     cin>> myBook[i].publishDate.Day;
+     j=j+1;
+ }
+ //Print out all book information
+   cout << endl << endl;
+
+   cout<<"Book Title"<<"\t\t Book Author"<<"\t\t Book Publisher"<<"\t\t Book Cost($)"<<"\t\t Publish Date"<<endl;
+    cout<<endl;
+  for (int i=0;i<5;i++){
+
+     cout <<myBook[i].title;
+     cout <<"\t\t  "<<myBook[i].author;
+
+     cout <<"\t\t  "<<myBook[i].publisher;
+     cout <<"\t\t  "<<myBook[i].cost;
+
+     cout <<"\t\t\t  "<<myBook[i].publishDate.Month<<"/"<<myBook[i].publishDate.Year<<"/"<<myBook[i].publishDate.Day<<endl;
+  }
+return 0;
+
+ }
+]0;tc3456co@ahscentos:~/Homework7[tc3456co@ahscentos Homework7]$ .a/[K[K[K./a.out
+Enter book title of book 1: titan
+Enter book author of book 1: sandesh
+Enter publisher of book 1: cococococ  
+Enter cost of book of book 1: 23
+Enter publish Year of Book 1: 2001
+Enter publish Month of Book 1: 2
+Enter publish Day of Book 1: 23
+Enter book title of book 2: lyala
+Enter book author of book 2: george
+Enter publisher of book 2: ascasc
+Enter cost of book of book 2: 34
+Enter publish Year of Book 2: 2012
+Enter publish Month of Book 2: 2
+Enter publish Day of Book 2: 23 5
+Enter book title of book 3: River
+Enter book author of book 3: sandesh
+Enter publisher of book 3: cocococ
+Enter cost of book of book 3: 45
+Enter publish Year of Book 3: 2010
+Enter publish Month of Book 3: 3
+Enter publish Day of Book 3: 54  12
+Enter book title of book 4: SU oul
+Enter book author of book 4: sandesh       George
+Enter publisher of book 4: ascdcsc
+Enter cost of book of book 4: 55
+Enter publish Year of Book 4: 2020
+Enter publish Month of Book 4: 6
+Enter publish Day of Book 4: 21
+Enter book title of book 5: Rage
+Enter book author of book 5: dotoku
+Enter publisher of book 5: assasca
+Enter cost of book of book 5: 34
+Enter publish Year of Book 5: 2019
+Enter publish Month of Book 5: 2 6
+Enter publish Day of Book 5: 23
+
+
+Book Title		 Book Author		 Book Publisher		 Book Cost($)		 Publish Date
+
+titan		  sandesh		  cocococ		  23			  2/2001/23
+lyala		  george		  ascasc		  34			  2/2012/25
+River		  sandesh		  cocococ		  45			  3/2010/12
+Soul		  George		  ascdcsc		  55			  6/2020/21
+Rage		  dotoku		  assasca		  34			  6/2019/23
+]0;tc3456co@ahscentos:~/Homework7[tc3456co@ahscentos Homework7]$ exit
+
+Script done on Sun 05 Apr 2020 12:28:21 PM CDT

@@ -1,0 +1,165 @@
+Script started on Wed 29 Jan 2020 11:27:33 PM CST
+]0;tc3456co@ahscentos:~/Homework1[?1034h[tc3456co@ahscentos Homework1]$ g++ main.cpp[K[K[K[K[K[K[K[K-0 main main.cpp[K[K[K[K[K[K[K[K[K[K[K[K[KHomework main.cpp
+g++: error: Homework: No such file or directory
+g++: error: unrecognized command line option ‘-0’
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ g++ -o Homework1 main.cpp
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1.out
+bash: ./Homework1.out: No such file or directory
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./a.out
+bash: ./a.out: No such file or directory
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ h[Kg_[K++ main.cpp
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./o.o[K[K[Ka.out
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 23
+Enter price of small pizza: $33
+Enter diameter of Large pizza(in inches): 45
+Enter price of large pizza: $30
+Small pizza: 
+Diameter= 23
+Price= $33.00, Price per square inches= $0.08
+Large pizza: Diameter= 45
+Price= $30.00, Price per square inches= $0.02
+ Large one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ cat main.cpp
+#include <iostream>
+#include <cmath>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+    // Declaration of variables.
+
+    float Sdiameter, Ldiameter, Sprice, Lprice;
+    float LpricePerInches, SpricePerInches;
+    cout << "Welcome to the pizza Consumers: " << endl;
+
+
+    // Asking for User input.
+
+    cout<<"Enter diameter of small pizza(in inches): ";
+    cin>>Sdiameter;
+    cout<<"Enter price of small pizza: $";
+    cin>>Sprice;
+    cout<<"Enter diameter of Large pizza(in inches): ";
+    cin>>Ldiameter;
+    cout<<"Enter price of large pizza: $";
+    cin>>Lprice;
+
+
+    // Calculating the price per square inches of large and small pizza.
+
+    SpricePerInches= Sprice/((22/7)*((Sdiameter/2)*(Sdiameter/2)));
+    LpricePerInches= Lprice/((22/7)*((Ldiameter/2)*(Ldiameter/2)));
+
+
+    cout <<setprecision(2)<<fixed;
+
+    //Output the Diameter and price per square inches of pizza.
+
+    cout<<"Small pizza: "<<endl;
+    cout<<"Diameter= "<<int(Sdiameter)<<endl;
+    cout<<"Price= $"<<Sprice<<", Price per square inches= $"<<SpricePerInches<<endl;
+    cout<<"Large pizza: ";
+    cout<<"Diameter= "<<int(Ldiameter)<<endl;
+    cout<<"Price= $"<<Lprice<<", Price per square inches= $"<<LpricePerInches<<endl;
+
+
+    //Comparing the price per inches of pizzas and then displaying the better price.
+
+    if (SpricePerInches>LpricePerInches)
+    { cout<<" Large one is better to buy."<<endl;
+
+    }
+    else if(SpricePerInches<LpricePerInches)
+    {
+        cout<<"Small one is better to buy."<<endl;
+    }
+
+
+    return 0;
+}
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 10
+Enter price of small pizza: $7.5
+Enter diameter of Large pizza(in inches): 13
+Enter price of large pizza: $14.5
+Small pizza: 
+Diameter= 10
+Price= $7.50, Price per square inches= $0.10
+Large pizza: Diameter= 13
+Price= $14.50, Price per square inches= $0.11
+Small one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 22  8
+Enter price of small pizza: $10
+Enter diameter of Large pizza(in inches): 10
+Enter price of large pizza: $9
+Small pizza: 
+Diameter= 8
+Price= $10.00, Price per square inches= $0.21
+Large pizza: Diameter= 10
+Price= $9.00, Price per square inches= $0.12
+ Large one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 8
+Enter price of small pizza: $5
+Enter diameter of Large pizza(in inches): 10
+Enter price of large pizza: $8
+Small pizza: 
+Diameter= 8
+Price= $5.00, Price per square inches= $0.10
+Large pizza: Diameter= 10
+Price= $8.00, Price per square inches= $0.11
+Small one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 12
+Enter price of small pizza: $10
+Enter diameter of Large pizza(in inches): 18
+Enter price of large pizza: $11
+Small pizza: 
+Diameter= 12
+Price= $10.00, Price per square inches= $0.09
+Large pizza: Diameter= 18
+Price= $11.00, Price per square inches= $0.05
+ Large one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 10
+Enter price of small pizza: $5
+Enter diameter of Large pizza(in inches): 15
+Enter price of large pizza: $8
+Small pizza: 
+Diameter= 10
+Price= $5.00, Price per square inches= $0.07
+Large pizza: Diameter= 15
+Price= $8.00, Price per square inches= $0.05
+ Large one is better to buy.
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homw[Kework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): a
+Enter price of small pizza: $Enter diameter of Large pizza(in inches): Enter price of large pizza: $Small pizza: 
+Diameter= 0
+Price= $0.00, Price per square inches= $-nan
+Large pizza: Diameter= 0
+Price= $0.00, Price per square inches= $-nan
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ ./Homework1
+Welcome to the pizza Consumers: 
+Enter diameter of small pizza(in inches): 10  
+
+
+
+
+a
+Enter price of small pizza: $Enter diameter of Large pizza(in inches): Enter price of large pizza: $Small pizza: 
+Diameter= 0
+Price= $0.00, Price per square inches= $-nan
+Large pizza: Diameter= 0
+Price= $0.00, Price per square inches= $-nan
+]0;tc3456co@ahscentos:~/Homework1[tc3456co@ahscentos Homework1]$ exit
+
+Script done on Wed 29 Jan 2020 11:34:34 PM CST
